@@ -167,4 +167,30 @@ public class Tree {
         }
 
     }
+
+
+    private int getDepth(){
+        if(this.head==null){
+            return 0;
+        }
+
+        return getDepth(this.head,1);
+
+    }
+    private int getDepth(Node n, int actDepth){
+        if(n.getNextRight()==null&&n.getNextLeft()==null){
+            return actDepth;
+        }
+
+        int leftDepth=0;
+        int rightDepth=0;
+
+        if(n.getNextLeft()!=null){
+            leftDepth=getDepth(n.getNextLeft(),actDepth+1);
+        }
+        if(n.getNextRight()!=null){
+            rightDepth=getDepth(n.getNextRight(),actDepth+1);
+        }
+        return Math.max(leftDepth,rightDepth);
+    }
 }

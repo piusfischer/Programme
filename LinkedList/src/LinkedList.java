@@ -13,17 +13,20 @@ public class LinkedList {
             head=node;
             return;
         }
-        //list has one element
+
+
         if(head.getNext()==null)
         {
             head.setNext(node);
         }
+
 
         Node tmp = head;
         while(tmp.getNext()!=null){
             tmp=tmp.getNext();
         }
         tmp.setNext(node);
+
 
     }
     public int get(int position){

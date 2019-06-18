@@ -1,0 +1,5 @@
+http://127.0.0.1:8000/admin/
+
+username: admin
+password: admin
+e-mail:	  admin@example.com
